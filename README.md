@@ -1,3 +1,8 @@
+<p float="center">
+  <img src="logos/logos.png" width="1000" />
+</p>
+
+
 # Creating Children in Wales: The Cohort for Health and wellbeing inequality (CWTCH) Cohort and Research-Ready Data Asset (RRDA)
 
 ### Sarah J Aldridge <sup>1</sup>, Lateef Akanni <sup>2</sup>, Stuart Bedston <sup>1</sup>, Davara Bennett <sup>2</sup>, Michelle Black <sup>2</sup>, Yanhua Chen <sup>2</sup>, Yu Wei Chua <sup>2</sup>, Oluwaseun B Esan <sup>2</sup>, Lucy J Griffiths <sup>1</sup>, Emily Lowthian <sup>3</sup>, Philip McHale <sup>2</sup>, Ashley Akbari <sup>1</sup> David Taylor-Robinson <sup>2</sup>
