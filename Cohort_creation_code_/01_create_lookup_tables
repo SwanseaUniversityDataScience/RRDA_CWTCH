@@ -1,0 +1,170 @@
+-- CREATE the lookup tables FOR child health inqueality project no.1409
+
+-- =================================================================================================
+-- Step 1: birth related lookup tables
+-- =================================================================================================
+
+CALL fnc.drop_if_exists('sailw1409v.lkp_ncch_bf_collection');
+
+CREATE TABLE sailw1409v.lkp_ncch_bf_collection
+(
+    code smallint NOT NULL,
+    name varchar(55)
+);
+
+INSERT INTO sailw1409v.lkp_ncch_bf_collection
+VALUES
+( 1, 'First feed'),
+( 2, 'Seven days (Guthrie Test)'),
+( 3, 'Ten days'),
+( 4, 'Six weeks'),
+( 5, 'Six months'),
+( 6, 'One year'),
+( 7, 'Two years'),
+( 8, 'At discharge'),
+( 9, 'Did skin-to-skin occur after birth?'),
+(10, 'Did skin-to-skin last for 30 minutes or more?'),
+(11, 'Did first breastfeed take place with one hour of birth?');
+
+
+CALL fnc.drop_if_exists('sailw1409v.lkp_ncch_bf_outcome');
+
+CREATE TABLE sailw1409v.lkp_ncch_bf_outcome
+(
+    code smallint NOT NULL,
+    name varchar(44)
+);
+
+INSERT INTO sailw1409v.lkp_ncch_bf_outcome
+VALUES
+(1, 'Exclusive milk'),
+(2, 'Combined milk feeding - predominantly breast'),
+(3, 'Combined milk feeding - partially breast'),
+(4, 'Artificial milk feeding'),
+(5, 'Yes'),
+(6, 'No');
+
+
+CALL fnc.drop_if_exists('sailw1409v.lkp_ons_country_1993');
+
+CREATE TABLE sailw1409v.lkp_ons_country_1993
+(
+    code    varchar(3)  NOT NULL,
+    country varchar(26),
+    region  varchar(13),
+    PRIMARY KEY (code)
+);
+
+INSERT INTO sailw1409v.lkp_ons_country_1993
+VALUES
+('064', 'England',                'UK'),
+('152', 'Northern Ireland',       'UK'),
+('179', 'Scotland',               'UK'),
+('220', 'Wales',                  'UK'),
+('078', 'Great Britain N.o.s.',   'UK'),
+('003', 'Alderney',               'UK'),
+('177', 'Sark',                   'UK'),
+('083', 'Guernsey and Herm',      'UK'),
+('103', 'Jersey',                 'UK'),
+('044', 'Channel Islands N.o.s.', 'UK'),
+('128', 'Isle of Man',            'UK'),
+('213', 'UK N.o.s.',              'UK'),
+('727', 'E&W',                    'UK'),
+('012', 'Austria',                'EU'),
+('019', 'Belgium',                'EU'),
+('032', 'Bulgaria',               'EU'),
+('056', 'Czech Republic',         'EU'),
+('057', 'Denmark',                'EU'),
+('066', 'Estonia',                'EU'),
+('070', 'Finland',                'EU'),
+('071', 'France',                 'EU'),
+('075', 'Germany',                'EU'),
+('079', 'Greece',                 'EU'),
+('091', 'Hungary',                'EU'),
+('097', 'Ireland',                'EU'),
+('099', 'Italy',                  'EU'),
+('113', 'Latvia',                 'EU'),
+('119', 'Lithuania',              'EU'),
+('120', 'Luxembourg',             'EU'),
+('127', 'Malta',                  'EU'),
+('144', 'Netherlands',            'EU'),
+('163', 'Poland',                 'EU'),
+('164', 'Portugal',               'EU'),
+('168', 'Romania',                'EU'),
+('185', 'Slovakia',               'EU'),
+('186', 'Slovenia',               'EU'),
+('195', 'Sweden',                 'EU'),
+('055', 'Cyprus',                 'EU'),
+('190', 'Spain',                  'EU'),
+('251', 'Spain n.o.s' ,           'EU'),
+('900', 'At Sea',                 'Not specified'),
+('903', 'In the Air',             'Not specified'),
+('901', 'Not Stated',             'Not stated'),
+('902', 'Not Stated',             'Not stated'),
+('904', 'Not Stated',             'Not stated'),
+('905', 'Not Stated',             'Not stated'),
+('906', 'Not Stated',             'Not stated');
+
+
+CALL fnc.drop_if_exists('sailw1409v.lkp_ons_country_2007');
+
+CREATE TABLE sailw1409v.lkp_ons_country_2007
+(
+    code    varchar(3)  NOT NULL,
+    country varchar(26),
+    region  varchar(13),
+    PRIMARY KEY (code)
+);
+
+INSERT INTO sailw1409v.lkp_ons_country_2007
+VALUES
+('921', 'England',                    'UK'),
+('922', 'Northern Ireland',           'UK'),
+('923', 'Scotland',                   'UK'),
+('924', 'Wales',                      'UK'),
+('925', 'Great Britain N.o.s.',       'UK'),
+('831', 'Guernsey',                   'UK'),
+('832', 'Jersey',                     'UK'),
+('833', 'Isle of Man',                'UK'),
+('931', 'Channel Islands N.o.s',      'UK'),
+('926', 'UK N.o.s.',                  'UK'),
+('040', 'Austria',                    'EU'),
+('056', 'Belgium',                    'EU'),
+('100', 'Bulgaria',                   'EU'),
+('203', 'Czech Republic',             'EU'),
+('208', 'Denmark',                    'EU'),
+('233', 'Estonia',                    'EU'),
+('246', 'Finland',                    'EU'),
+('250', 'France',                     'EU'),
+('276', 'Germany',                    'EU'),
+('300', 'Greece',                     'EU'),
+('348', 'Hungary',                    'EU'),
+('372', 'Ireland',                    'EU'),
+('380', 'Italy',                      'EU'),
+('428', 'Latvia',                     'EU'),
+('440', 'Lithuania',                  'EU'),
+('442', 'Luxembourg',                 'EU'),
+('470', 'Malta',                      'EU'),
+('528', 'Netherlands',                'EU'),
+('616', 'Poland',                     'EU'),
+('620', 'Portugal',                   'EU'),
+('642', 'Romania',                    'EU'),
+('703', 'Slovakia',                   'EU'),
+('705', 'Slovenia',                   'EU'),
+('752', 'Sweden',                     'EU'),
+('901', 'Cyprus EU',                  'EU'),
+('911', 'Spain',                      'EU'),
+('913', 'Spain n.o.s',                'EU'),
+('248', 'Aland islands',              'EU'),
+('912', 'Canary Islands',             'EU'),
+('191', 'Croatia',                    'EU'),
+('254', 'French Guiana',              'EU'),
+('292', 'Gibraltar',                  'EU'),
+('312', 'Guadeloupe',                 'EU'),
+('474', 'Martinique',                 'EU'),
+('175', 'Mayotte',                    'EU'),
+('638', 'Réunion',                   'EU'),
+('663', 'Saint Martin (French Part)', 'EU'),
+('991', 'At Sea',                     'Not specified'),
+('992', 'In the Air',                 'Not specified'),
+('969', 'Not Stated',                 'Not specified');
