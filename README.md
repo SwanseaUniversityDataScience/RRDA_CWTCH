@@ -1,6 +1,4 @@
-Swansea univ pop data scienc uni of liverpool logo
-
-# Creating the Research Ready Data Asset (RRDA) Children in Wales: The Cohort for Health inequalities (CWTCH)
+# Creating Children in Wales: The Cohort for Health and wellbeing inequality (CWTCH) Cohort and Research-Ready Data Asset (RRDA)
 
 ### Sarah J Aldridge <sup>1</sup>, Lateef Akanni <sup>2</sup>, Stuart Bedston <sup>1</sup>, Davara Bennett <sup>2</sup>, Michelle Black <sup>2</sup>, Yanhua Chen <sup>2</sup>, Yu Wei Chua <sup>2</sup>, Oluwaseun B Esan <sup>2</sup>, Lucy J Griffiths <sup>1</sup>, Emily Lowthian <sup>3</sup>, Philip McHale <sup>2</sup>, Ashley Akbari <sup>1</sup> David Taylor-Robinson <sup>2</sup>
 
@@ -13,12 +11,11 @@ Swansea univ pop data scienc uni of liverpool logo
 
 This repository contains scripts and resources developed for creating **Children in Wales: The Cohort for Health and wellbeing inequality (CWTCH) Cohort** and **Research-Ready Data Asset (RRDA)** within the Secure Anonymised Information Linkage (SAIL) Databank.
 
-The RRDA:
-- Contains a cohort of individuals who have a record of being born or living in Wales between 0 and 18 with a birth date on or after January 1st 2000 and their linked mothers. This cohort is separated into 3 sub-cohorts, each of which contain a range of varaibles relevent to that cohot of people:
+The RRDA contains a cohort of individuals who have a record of being born or living in Wales between 0 and 18 with a birth date on or after January 1st 2000 and their linked mothers. This cohort is separated into 3 sub-cohorts, each of which contain a range of variables relevent to that cohort of people:
     - Birth Cohort - All children with a birth record in SAIL. 
     - Child Cohort - All children who have a recorded residence in Wales (appear in the Welsh Demographic Service Dataset - WDSD).
     - Mother Cohort - All mothers linked to a child from the Birth Cohort using birth records.
-- Additionally the RRDA holds a selection of derived supplementary tables to aid researchers
+Additionally the RRDA holds a selection of derived supplementary tables to further aid researchers.
 
 
 ## 🖋 How to cite this work
