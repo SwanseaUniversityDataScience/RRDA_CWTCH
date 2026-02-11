@@ -5,12 +5,6 @@
 -- Created:      2024/09/02
 -- Description:  This script builds the LAC derived table used for project 1409
 
--- 		LAC derived table - 
--- 		EDUW derived table -
--- 		residency derived table - 
--- 		administrative stagin tables -
-
-
 -- please note - please check if these tables have already been created and populated before running 
 -- this script. It may take quite some time.
 -- =================================================================================================
@@ -220,7 +214,7 @@ VALUES
 ('H3',   'childrens_home',          'Homes inside LA boundary'),
 ('H4',   'childrens_home',          'Homes outside LA boundary'),
 ---- Hostels and supportive reidential settings other than children's homes
-('H5',   'semi_independent_living', 'Residential accommodation not subject to the regulations covering children’s homes'),
+('H5',   'semi_independent_living', 'Residential accommodation not subject to the regulations covering childrenÂ’s homes'),
 ---- Other residential placements
 ('R1',   'other_residential',       'Residential care home'),
 ('R2',   'medical_care',            'NHS/Health Trust or other establishment providing medical or nursing care'),
@@ -692,4 +686,5 @@ INNER JOIN fye_dates
 	ON fye_dates.fye_dt BETWEEN epi_start_dt AND epi_end_dt
 GROUP BY fye_dates.fye_dt
 ORDER BY fye_dates.fye_dt;
+
 
